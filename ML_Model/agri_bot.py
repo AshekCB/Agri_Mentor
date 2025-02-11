@@ -1,6 +1,6 @@
 import openai
 
-
+openai.api_key="sk-4rTQfabgEe6tRYpnqqspBo8QtK6fPEfGrMtJ02ECEmT3BlbkFJqusFw8cdUjgJ4cej-R5rJEePSO2aHbz0_d3w3gGH0A"
 
 def Agri_Bot_System(user_query):
     #model defination
