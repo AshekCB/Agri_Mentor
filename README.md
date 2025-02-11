@@ -1,5 +1,8 @@
 # 🌾 Agri Mentor - A Crop Recommendation System [CRS] 🌾  
 
+#Access this service at the url 
+https://agrimentor.onrender.com/
+
 ## 📌 Overview  
 **Agri Mentor** is a smart **Crop Recommendation System (CRS)** designed to help farmers choose the best crops based on **soil type, weather conditions, and nutrients**. The goal is to **enhance productivity** and promote **sustainable farming** practices.  
 
