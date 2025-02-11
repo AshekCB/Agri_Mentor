@@ -1,5 +1,6 @@
 import openai
 
+openai.api_key="sk-4rTQfabgEe6tRYpnqqspBo8QtK6fPEfGrMtJ02ECEmT3BlbkFJqusFw8cdUjgJ4cej-R5rJEePSO2aHbz0_d3w3gGH0A"
 
 def get_fertilizers_recommendations(crop, nitrogen, phosphorus, potassium, soil_ph, symptoms):
     #Prompt is a natural language request pass to a model To get a desired outcome as a response
