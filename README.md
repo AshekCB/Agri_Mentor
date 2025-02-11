@@ -14,8 +14,7 @@
   
 ## 🖥️ Tech Stack  
 - **Frontend:** HTML, CSS  
-- **Backend:** Python (Flask)  
-- **Database:** MySQL / SQLite  
+- **Backend:** Python (Flask)   
 - **AI/ML:** Scikit-Learn, Pandas, 
 - **Version Controll System:** Git,GitHub
 - **Api:** ChatGpt Openai Key
