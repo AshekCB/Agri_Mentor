@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier # Ensembling technique Rando
 
 
 #data Loading
-df=pd.read_csv("D:\Flask Demo's\Crop Recommendation System [CRS]\Source Codes\Crop_recommendation.csv")
+df=pd.read_csv("https://raw.githubusercontent.com/AshekCB/Agri_Mentor/refs/heads/main/Crop_recommendation.csv")
 
 #Feature Extraction
 #independent feature
