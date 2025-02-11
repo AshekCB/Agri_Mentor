@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key="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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def Agri_Bot_System(user_query):
     #model defination
