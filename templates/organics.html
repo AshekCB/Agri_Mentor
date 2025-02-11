@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://github.com/AshekCB/CRS-Images/blob/main/logo%20website.png?raw=true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>organic farming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #ecf0f1; 
+            color: #2c3e50; 
+        }
+        header { 
+            background: linear-gradient(90deg, #16a085, #1abc9c); 
+            color: white; 
+            padding: 10px 0; 
+            text-align: center; 
+            font-size: 1em; 
+            font-weight: bold; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px;
+        }
+        header img { 
+            height: 80px; 
+            width: 80px; 
+            border-radius: 50%; 
+            border: 3px solid white; 
+            object-fit: cover;
+        }
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            background: #2c3e50; 
+            padding: 10px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 25px; 
+            margin: 0 15px; 
+            font-size: 1.1em; 
+            transition: 0.3s; 
+            border-radius: 5px; 
+        }
+        nav a:hover { background: #f39c12; transform: scale(1.1); }
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+            background: white;
+        }
+        .content h2 {
+            font-size: 2.5em;
+            color: #16a085;
+        }
+        .factor {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: left;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .factor h3 {
+            color: #e67e22;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="{{url_for('home')}}"> 
+            <img src="https://github.com/AshekCB/CRS-Images/blob/main/crs%20logo.png?raw=true" alt="Agri Mentor Logo">
+        </a>
+        <div>
+            <a href="{{url_for('home')}}" style="text-decoration: none; color: white;">
+                <h1><b>🌾🌾 Organic Farming 🌾🌾</b></h1>
+            </a>
+            <h4>Save life's and save organic farming</h4>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('soil_test')}}">SoilTest</a>
+        <a href="{{url_for('weather')}}">Weather</a>
+        <a href="{{url_for('crs')}}">Crop Recommendation System</a>
+        <a href="{{url_for('fertiliser_recom')}}">Fertiliser Recommendation System</a>
+        <a href="{{url_for('organic_farming')}}">Organic Farming</a>
+        <a href="{{url_for('govt_webs')}}">Government Websites</a>
+    </nav>
+
+    <section class="content">
+        <h2>🌱 Organic Farming: A Sustainable Approach 🌱</h2><img src="https://github.com/AshekCB/CRS-Images/blob/main/organic%20farming.png?raw=true" 
+     alt="Organic Farming" 
+     style="display: block; margin: 20px auto; width: 80%; max-width: 400px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+
+        <p>Organic farming is essential for promoting <strong>soil health, biodiversity, and eco-friendly agricultural practices</strong>. It minimizes the use of synthetic chemicals, enhances food safety, and reduces environmental pollution. By using natural fertilizers, crop rotation, and biological pest control, organic farming ensures <strong>sustainable food production</strong> and preserves natural ecosystems.
+
+        <div class="factor">
+            <h3>🌿 Importance of Organic Farming</h3>
+            <p>Organic farming plays a crucial role in ensuring long-term agricultural sustainability. It reduces chemical dependence, supports healthier ecosystems, and improves food quality. This approach helps in maintaining soil fertility and conserving water while minimizing environmental degradation.
+<br>To Know More About Importance of Organic Farming
+<a href="https://youtu.be/lRyXlvIJFWI?si=PvDmSWMAniDhi8kq"> click here...</a></p>
+    
+
+</p>
+        </div>
+    
+        <div class="factor">
+            <h3>🪴 Scope of Organic Farming</h3>
+            <p>The demand for organic products is rapidly increasing as people become more health-conscious and environmentally aware. Organic farming has a vast scope in:</p>
+            <ul>
+                <li><strong>Sustainable Agriculture</strong>: Enhancing soil fertility and long-term crop productivity.</li>
+                <li><strong>Health & Nutrition</strong>: Providing chemical-free, nutrient-rich food.</li>
+                <li><strong>Environmental Conservation</strong>: Reducing soil degradation, water pollution, and greenhouse gas emissions.</li>
+                <li><strong>Economic Growth</strong>: Opening opportunities for farmers in organic food markets and exports.</li>
+            </ul>
+        </div>
+    
+        <div class="factor">
+            <h3>🌾 Aim of Organic Farming</h3>
+            <p>The primary goals of organic farming include:</p>
+            <ul>
+                <li>Maintaining <strong>soil fertility</strong> through composting and crop rotation.</li>
+                <li>Eliminating <strong>chemical pesticides and fertilizers</strong> for a toxin-free ecosystem.</li>
+                <li>Encouraging <strong>biodiversity and natural pest control</strong>.</li>
+                <li>Promoting <strong>sustainable and self-sufficient farming systems</strong>.</li>
+            </ul>
+        </div>
+    
+        <div class="factor">
+            <h3>💚 Advantages of Organic Farming</h3>
+            <p>Organic farming provides numerous benefits, including:</p>
+            <ul>
+                <li>✅ <strong>Healthier Food</strong>: No chemical residues, ensuring better nutrition.</li>
+                <li>✅ <strong>Environmental Protection</strong>: Reduces soil erosion, conserves water, and lowers carbon footprint.</li>
+                <li>✅ <strong>Enhanced Soil Fertility</strong>: Improves soil structure and microbial activity.</li>
+                <li>✅ <strong>Better Market Value</strong>: Organic products fetch higher prices, benefiting farmers.</li>
+                <li>✅ <strong>Biodiversity Preservation</strong>: Encourages natural habitats and pollinators.</li>
+            </ul>
+        </div>
+    
+        <p>Organic farming is more than just a method—it's a <strong>commitment to a healthier planet and future generations</strong>. 🌍🌿</p>
+    </section>
+    
+
+
+
+   <div style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
+    <a href="{{url_for('agri_bot')}}" style="text-decoration: none; color:black;">
+        <img src="https://raw.githubusercontent.com/AshekCB/CRS-Images/refs/heads/main/bot%20logo.png" alt="AgriBot" style="width: 80px; height: 80px; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+        <p style="margin-top: 5px; font-size: 14px; font-weight: bold;">Chat with AgriBot 🌱</p>
+    </a>
+</div>
+
+<footer style="background: #2c3e50; color: white; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%; font-size: 1em;">
+    <p>&copy; 2025 AgriMentor. All Rights Reserved by ABHISHEK C B [Developer].</p>
+    <p>
+        <a href="{{url_for('home')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Home</a> |
+        <a href="{{url_for('about')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">About</a> |
+        <a href="{{url_for('soil_test')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Soil Test</a> |
+        <a href="{{url_for('weather')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Weather</a>
+        <a href="{{url_for('crs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Crop Recommendations</a>
+        <a href="{{url_for('fertiliser_recom')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Fertilisers</a>
+        <a href="{{url_for('organic_farming')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Organic Farming</a>
+        <a href="{{url_for('govt_webs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Govt Websites for farmers</a>
+    </p>
+    <p>
+        <a href="https://www.linkedin.com/in/abhishek-c-b-206587242/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/ashek_babu_18/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+        
+	<a href="mailto:ashek9837@gmail.com" style="color: white; text-decoration: none; margin: 0 15px;">
+            <i class="fas fa-envelope"></i> Gmail
+        </a> 
+        |
+        <a href="tel:+91 7204489644" style="color: white; text-decoration: none; margin: 0 15px;">
+            <i class="fas fa-phone"></i> Phone
+        </a>
+    </p>
+</footer>
+
+
+</body>
+</html>

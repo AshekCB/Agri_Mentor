@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://github.com/AshekCB/CRS-Images/blob/main/logo%20website.png?raw=true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendations Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #ecf0f1; 
+            color: #2c3e50; 
+            text-align: center;
+        }
+        header { 
+            background: linear-gradient(90deg, #16a085, #1abc9c); 
+            color: white; 
+            padding: 10px 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px;
+        }
+        header img { 
+            height: 80px; 
+            width: 80px; 
+            border-radius: 50%; 
+            border: 3px solid white; 
+            object-fit: cover;
+        }
+        #response_box {
+            margin-top: 20px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.3em;
+            color: #000;
+            min-height: 100px;
+            text-align: left;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="{{url_for('home')}}"> 
+            <img src="https://github.com/AshekCB/CRS-Images/blob/main/crs%20logo.png?raw=true" alt="Agri Mentor Logo">
+        </a>
+        <div>
+            <h1><b>🌾🌾 Crop Recommendations Result 🌾🌾</b></h1>
+            <h4>A Machine Learning Model</h4>
+        </div>
+    </header>
+
+    <div id="response_box">
+        {% if result %}
+            <p>🌱 <b>Recommended Crop:</b>🌾<b>{{result}}</b>🌾</p>
+            <p>Based on key soil parameters such as pH, temperature, rainfall, humidity, and essential nutrients (N, P, K), 
+            this crop is the <b>best choice</b> for optimal yield 📈 and long-term sustainability 🌍.</p>
+            <p>For better outcomes, consider <b>market demand 💰</b>, <b>resource availability 💧</b>, and <b>seasonal factors 🌦️</b>.</p>
+            
+            <p>If you want to know more about the recommended crop 🌾<b>{{result}}🌾</b>, <a href="{{url_for('agri_bot')}}">Check here...</a></p>
+            <p>If you want to know about Fertilisers used for 🌾<b>{{result}}</b>🌾, then <a href="{{url_for('fertiliser_recom')}}">Check here...</a></p>
+            <p>If you want to know about government websites related to farming, <a href="{{url_for('govt_webs')}}">Check here...</a></p>
+        {% else %}
+            <span style="color: #999;">No result available</span>
+        {% endif %}
+    </div>
+    
+    <div style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
+        <a href="{{url_for('agri_bot')}}" style="text-decoration: none; color:black;">
+            <img src="https://raw.githubusercontent.com/AshekCB/CRS-Images/refs/heads/main/bot%20logo.png" alt="AgriBot" style="width: 80px; height: 80px; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+            <p style="margin-top: 5px; font-size: 14px; font-weight: bold;">Chat with AgriBot 🌱</p>
+        </a>
+    </div>
+
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%; font-size: 1em;">
+        <p>&copy; 2025 AgriMentor. All Rights Reserved by ABHISHEK C B [Developer].</p>
+        <p>
+            <a href="{{url_for('home')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Home</a> |
+            <a href="{{url_for('about')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">About</a> |
+            <a href="{{url_for('soil_test')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Soil Test</a> |
+            <a href="{{url_for('weather')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Weather</a> |
+            <a href="{{url_for('crs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Crop Recommendations</a> |
+            <a href="{{url_for('fertiliser_recom')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Fertilisers</a> |
+            <a href="{{url_for('organic_farming')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Organic Farming</a> |
+            <a href="{{url_for('govt_webs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Govt Websites for farmers</a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/abhishek-c-b-206587242/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ashek_babu_18/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:ashek9837@gmail.com" style="color: white; text-decoration: none; margin: 0 15px;"><i class="fas fa-envelope"></i> Gmail</a> |
+            <a href="tel:+91 7204489644" style="color: white; text-decoration: none; margin: 0 15px;"><i class="fas fa-phone"></i> Phone</a>
+        </p>
+    </footer>
+</body>
+</html>

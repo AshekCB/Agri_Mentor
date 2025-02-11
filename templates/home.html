@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="https://github.com/AshekCB/CRS-Images/blob/main/logo%20website.png?raw=true">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #ecf0f1; 
+            color: #2c3e50; 
+        }
+        header { 
+            background: linear-gradient(90deg, #16a085, #1abc9c); 
+            color: white; 
+            padding: 10px 0; 
+            text-align: center; 
+            font-size: 1em; 
+            font-weight: bold; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px;
+        }
+        header img { 
+            height: 80px; 
+            width: 80px; 
+            border-radius: 50%; 
+            border: 3px solid white; 
+            object-fit: cover;
+        }
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            background: #2c3e50; 
+            padding: 10px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 25px; 
+            margin: 0 15px; 
+            font-size: 1.1em; 
+            transition: 0.3s; 
+            border-radius: 5px; 
+        }
+        nav a:hover { background: #f39c12; transform: scale(1.1); }
+        .hero {
+            text-align: center;
+            padding: 80px 20px; /* Reduced padding */
+            background: url('farm.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+            margin: 0; /* Removes unnecessary space */
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero h1, .hero p, .hero .btn {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 { 
+            font-size: 3em; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+        }
+        .hero p { 
+            font-size: 1.2em; 
+            max-width: 800px; 
+            margin: auto; 
+            line-height: 1.6; 
+        }
+        .btn {
+            background: #f39c12;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.1em;
+            transition: 0.3s;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+        .btn:hover { background: #e67e22; transform: scale(1.1); }
+        .about { 
+            padding: 50px 20px; /* Reduced padding */
+            text-align: center; 
+            background: white; 
+        }
+        .about h2 { font-size: 2.5em; color: #16a085; }
+        .about p { 
+            font-size: 1.2em; 
+            color: #555; 
+            max-width: 900px; 
+            margin: auto; 
+            line-height: 1.6; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+	<a href="{{url_for('home')}}"> 
+        <img src="https://github.com/AshekCB/CRS-Images/blob/main/crs%20logo.png?raw=true"  alt="Agri Mentor Logo">
+    	</a>
+<div>
+	    <a href="{{url_for('home')}}" style="text-decoration: none; color: white;">
+
+            <h1><b>🌾🌾 Agri Mentor 🌾🌾</b></h1></a>
+            <h4>A Crop Recommendation System [CRS]</h4>
+        </div>
+    </header>
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('soil_test')}}">SoilTest</a>
+        <a href="{{url_for('weather')}}">Weather</a>
+        <a href="{{url_for('crs')}}">Crop Recommendation System</a>
+        <a href="{{url_for('fertiliser_recom')}}">Fertiliser Recommendation System</a>
+        <a href="{{url_for('organic_farming')}}">Organic Farming</a>
+        <a href="{{url_for('govt_webs')}}">Government Websites</a>
+    </nav>
+
+
+    <section class="about">
+    <h2 style="color: #16a085; font-size: 2.8em;">🌾 Welcome to AgriMentor 🌾</h2>
+    <p style="font-size: 1.3em; color: #333; max-width: 900px; margin: auto; line-height: 1.7; text-align: center;">
+        <b>AgriMentor</b> is a smart <b>Crop Recommendation System (CRS)</b> designed to help farmers choose the best crops based on 
+        <b>soil type, weather conditions, and nutrients</b>. Our goal is to enhance <b>productivity</b> and promote 
+        <b>sustainable farming practices</b>.
+    </p>
+
+    <h3 style="color: #e67e22; font-size: 2.2em; margin-top: 30px;">🌱 Why Choose AgriMentor?</h3>
+    <ul style="list-style: none; padding: 0; font-size: 1.2em; line-height: 1.8; color: #555; text-align: center;">
+        <li>✔ <b>Crop recommendations based on several features</b> for better yield.</li>
+        <li>✔ <b>Data-driven insights</b> to make informed decisions.</li>
+        <li>✔ <b>Sustainable & Organic Farming Guidance.</b></li>
+	<li>✔ <b>Weather Forecast Integration.</b></li>
+	<li>✔ <b>Crop Insurance & Risk Analysis.</b></li>
+	<li>✔ <b>Fertilizer & Pesticide Suggestions.</b></li>
+	
+    </ul>
+
+    <h3 style="color: #f39c12; font-size: 2.2em; margin-top: 30px;">🚜 Get Started Today!</h3>
+    <p style="font-size: 1.3em; color: #333; max-width: 900px; margin: auto; line-height: 1.7; text-align: center;">
+        Optimize your farm with <b>smart crop recommendations</b> and maximize your yield.  
+        Let <b>AgriMentor</b> be your trusted farming guide.
+<a href="{{url_for('crs')}}" class="btn">Get Started</a>
+    </p>
+
+    <h3 style="color: #2980b9; font-size: 2.2em; margin-top: 30px;">📖 Meaning of "AgriMentor" in Sanskrit</h3>
+    <p style="font-size: 1.3em; color: #333; max-width: 900px; margin: auto; line-height: 1.7; text-align: center;">
+        The name <b>"AgriMentor"</b> can be broken down as:
+    </p>
+    <ul style="list-style: none; padding: 0; font-size: 1.2em; line-height: 1.8; color: #555; text-align: center;">
+        <li><b>Agri (अग्री)</b> – Derived from the Sanskrit word <b>"अग्रि" (Agri)</b> meaning <i>foremost</i> or <i>leader</i>, also associated with agriculture.</li>
+        <li><b>Mentor</b> – A guide or teacher, which in Sanskrit aligns with <b>"गुरु" (Guru)</b> or <b>"मार्गदर्शक" (Mārgadarśaka)</b>.</li>
+    </ul>
+    <p style="font-size: 1.3em; color: #333; max-width: 900px; margin: auto; line-height: 1.7; text-align: center;">
+        Thus, <b>AgriMentor</b> in Sanskrit can be interpreted as:  
+        <b style="color: #27ae60;">"अग्रिम मार्गदर्शक" (Agram Mārgadarśaka)</b> – meaning <i>"Foremost Guide in Agriculture."</i>
+    </p>
+</section>
+
+<div style="position: fixed; bottom: 20px; right: 20px; text-align: center;">
+    <a href="{{url_for('agri_bot')}}" style="text-decoration: none; color:black;">
+        <img src="https://raw.githubusercontent.com/AshekCB/CRS-Images/refs/heads/main/bot%20logo.png" alt="AgriBot" style="width: 80px; height: 80px; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+        <p style="margin-top: 5px; font-size: 14px; font-weight: bold;">Chat with AgriBot 🌱</p>
+    </a>
+</div>
+
+<footer style="background: #2c3e50; color: white; text-align: center; padding: 20px; position: relative; bottom: 0; width: 100%; font-size: 1em;">
+    <p>&copy; 2025 AgriMentor. All Rights Reserved by ABHISHEK C B [Developer].</p>
+    <p>
+        <a href="{{url_for('home')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Home</a> |
+        <a href="{{url_for('about')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">About</a> |
+        <a href="{{url_for('soil_test')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Soil Test</a> |
+        <a href="{{url_for('weather')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Weather</a>
+        <a href="{{url_for('crs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Crop Recommendations</a>
+        <a href="{{url_for('fertiliser_recom')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Fertilisers</a>
+        <a href="{{url_for('organic_farming')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Organic Farming</a>
+        <a href="{{url_for('govt_webs')}}" style="color: #1abc9c; text-decoration: none; margin: 0 10px;">Govt Websites for farmers</a>
+    </p>
+    <p>
+        <a href="https://www.linkedin.com/in/abhishek-c-b-206587242/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/ashek_babu_18/" target="_blank" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+        
+	<a href="mailto:ashek9837@gmail.com" style="color: white; text-decoration: none; margin: 0 15px;">
+            <i class="fas fa-envelope"></i> Gmail
+        </a> 
+        |
+        <a href="tel:+91 7204489644" style="color: white; text-decoration: none; margin: 0 15px;">
+            <i class="fas fa-phone"></i> Phone
+        </a>
+    </p>
+</footer>
+
+
+
+</body>
+</html>
